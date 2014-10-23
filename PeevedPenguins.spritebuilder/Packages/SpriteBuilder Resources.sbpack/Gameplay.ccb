@@ -301,8 +301,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>204</real>
-											<real>196</real>
+											<real>192</real>
+											<real>113</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -315,8 +315,8 @@
 										<string>Point</string>
 										<key>value</key>
 										<array>
-											<real>0.5</real>
-											<real>0.5</real>
+											<real>0.200148805975914</real>
+											<real>0.046786721795797348</real>
 										</array>
 									</dict>
 									<dict>
@@ -545,8 +545,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>
