@@ -21,8 +21,15 @@
     CCPhysicsJoint *_penguinCatapultJoint;
 }
 
+-(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
+{
+    CCLOG(@"Something collided with a seal!");
+}
+
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
+    _physicsNode.collisionDelegate = self;
+    
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
