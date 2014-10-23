@@ -134,11 +134,11 @@
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* MainScene.h */,
+				B7378993180767190076A88C /* MainScene.m */,
 				CF3ED4A019F8896700791D6D /* Penguin.h */,
 				CF3ED4A119F8896700791D6D /* Penguin.m */,
 				CF3ED4A419F8897B00791D6D /* Seal.h */,
 				CF3ED4A519F8897B00791D6D /* Seal.m */,
-				B7378993180767190076A88C /* MainScene.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
