@@ -2216,7 +2216,7 @@
 		<key>children</key>
 		<array/>
 		<key>customClass</key>
-		<string></string>
+		<string>WaitingPenguin</string>
 		<key>displayName</key>
 		<string>CCSprite</string>
 		<key>memberVarAssignmentName</key>
@@ -2301,6 +2301,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -2348,7 +2350,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>4</real>
 			<key>name</key>
