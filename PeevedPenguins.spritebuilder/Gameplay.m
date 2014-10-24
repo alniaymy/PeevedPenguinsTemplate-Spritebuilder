@@ -29,6 +29,8 @@
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
     
+    
+     _physicsNode.collisionDelegate = self;
     // tell this scene to accept touches
     self.userInteractionEnabled = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
@@ -38,7 +40,7 @@
     // nothing shall collide with our invisible nodes
     _pullbackNode.physicsBody.collisionMask = @[];
     _mouseJointNode.physicsBody.collisionMask = @[];
-    _physicsNode.collisionDelegate = self;
+   
 
 }
 
