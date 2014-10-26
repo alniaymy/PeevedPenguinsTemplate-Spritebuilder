@@ -38,28 +38,6 @@ static const float MIN_SPEED = 5.f;
 
 }
 
-//- (void)update:(CCTime)delta
-//{
-//    // if speed is below minimum speed, assume this attempt is over
-//    if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
-//        [self nextAttempt];
-//        return;
-//    }
-//    
-//    int xMin = _currentPenguin.boundingBox.origin.x;
-//    
-//    if (xMin < self.boundingBox.origin.x) {
-//        [self nextAttempt];
-//        return;
-//    }
-//    
-//    int xMax = xMin + _currentPenguin.boundingBox.size.width;
-//    
-//    if (xMax > (self.boundingBox.origin.x + self.boundingBox.size.width)) {
-//        [self nextAttempt];
-//        return;
-//    }
-//}
 
 - (void)sealRemoved:(CCNode *)seal {
     
@@ -125,13 +103,38 @@ static const float MIN_SPEED = 5.f;
     }
 }
 
-//- (void)nextAttempt {
-//    _currentPenguin = nil;
-//    [_contentNode stopAction:_followPenguin];
-//    
-//    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
-//    [_contentNode runAction:actionMoveTo];
-//}
+
+- (void)update:(CCTime)delta
+{
+    // if speed is below minimum speed, assume this attempt is over
+    if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
+        [self nextAttempt];
+        return;
+    }
+
+    int xMin = _currentPenguin.boundingBox.origin.x;
+
+    if (xMin < self.boundingBox.origin.x) {
+        [self nextAttempt];
+        return;
+    }
+
+    int xMax = xMin + _currentPenguin.boundingBox.size.width;
+
+    if (xMax > (self.boundingBox.origin.x + self.boundingBox.size.width)) {
+        [self nextAttempt];
+        return;
+    }
+}
+
+
+- (void)nextAttempt {
+    _currentPenguin = nil;
+    [_contentNode stopAction:_followPenguin];
+    
+    CCActionMoveTo *actionMoveTo = [CCActionMoveTo actionWithDuration:1.f position:ccp(0, 0)];
+    [_contentNode runAction:actionMoveTo];
+}
 
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
