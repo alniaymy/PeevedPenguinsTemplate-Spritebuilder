@@ -23,7 +23,7 @@
     CCAction *_followPenguin;
 }
 
-static const float MIN_SPEED = 5.f;
+//static const float MIN_SPEED = 5.f;
 
 -(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
 {
@@ -107,7 +107,7 @@ static const float MIN_SPEED = 5.f;
 - (void)update:(CCTime)delta
 {
     // if speed is below minimum speed, assume this attempt is over
-    if (ccpLength(_currentPenguin.physicsBody.velocity) < MIN_SPEED){
+    if (ccpLength(_currentPenguin.physicsBody.velocity) < 5.0f){
         [self nextAttempt];
         return;
     }
